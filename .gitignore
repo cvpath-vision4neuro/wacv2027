@@ -1,0 +1,32 @@
+# Internal coordination notes: kept locally, shared by email, not published
+TODO.md
+
+# Local tooling, not part of the website
+.claude/
+.vscode/
+.idea/
+*.code-workspace
+
+# Editor and OS noise
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+*.swp
+*~
+~$*
+
+# Anything that should never end up in a public repo
+.env
+.env.*
+*.pem
+*.key
+secrets*
+*.log
+
+# In case anyone runs tooling in this folder later
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/

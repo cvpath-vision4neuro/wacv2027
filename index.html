@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision for Biomedical Discovery | WACV 2027 Workshop</title>
+  <meta name="description" content="Full-day WACV 2027 workshop joining CVPath (computational pathology, OWL challenge) and Vision4Neuro (neural decoding). Call for papers, important dates and program.">
+  <meta name="keywords" content="WACV 2027 workshop, computational pathology, digital pathology, computer vision, neural decoding, EEG, fMRI, brain-computer interface, foundation models, whole-slide imaging, CVPath, Vision4Neuro">
+  <meta name="author" content="CVPath and Vision4Neuro organizing committees">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://cvpath-wacv2027.github.io/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vision for Biomedical Discovery (CVPath + Vision4Neuro)">
+  <meta property="og:title" content="Vision for Biomedical Discovery | WACV 2027 Workshop">
+  <meta property="og:description" content="Full-day WACV 2027 workshop joining CVPath (computational pathology, OWL challenge) and Vision4Neuro (neural decoding). Call for papers, important dates and program.">
+  <meta property="og:url" content="https://cvpath-wacv2027.github.io/">
+  <meta property="og:image" content="https://cvpath-wacv2027.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vision for Biomedical Discovery, a full-day WACV 2027 workshop combining CVPath and Vision4Neuro">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vision for Biomedical Discovery | WACV 2027 Workshop">
+  <meta name="twitter:description" content="Full-day WACV 2027 workshop joining CVPath (computational pathology, OWL challenge) and Vision4Neuro (neural decoding). Call for papers, important dates and program.">
+  <meta name="twitter:image" content="https://cvpath-wacv2027.github.io/assets/img/og-image.png">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0d1117">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Set the colour theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem("vbd-theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Vision for Biomedical Discovery (CVPath + Vision4Neuro)",
+    "alternateName": "CVPath + Vision4Neuro @ WACV 2027",
+    "description": "Full-day workshop at IEEE/CVF WACV 2027 combining CVPath (computer vision for computational and digital pathology, including the OWL challenge) and Vision4Neuro (neural decoding and computer vision for behavioural and clinical neuroscience).",
+    "startDate": "2027-01-04",
+    "endDate": "2027-01-05",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "url": "https://cvpath-wacv2027.github.io/",
+    "image": "https://cvpath-wacv2027.github.io/assets/img/og-image.png",
+    "inLanguage": "en",
+    "isAccessibleForFree": false,
+    "location": {
+      "@type": "Place",
+      "name": "WACV 2027, Disney Springs",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lake Buena Vista",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    "superEvent": {
+      "@type": "Event",
+      "name": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2027",
+      "url": "https://wacv.thecvf.com/Conferences/2027",
+      "startDate": "2027-01-04",
+      "endDate": "2027-01-08"
+    },
+    "organizer": [
+      {
+        "@type": "Person",
+        "name": "Cristian Tommasino",
+        "email": "cristian.tommasino@unina.it",
+        "affiliation": "University of Naples Federico II"
+      },
+      {
+        "@type": "Person",
+        "name": "Marios Petrov",
+        "email": "mpetrov@uccs.edu",
+        "affiliation": "University of Colorado Colorado Springs"
+      }
+    ],
+    "subEvent": [
+      {
+        "@type": "Event",
+        "name": "CVPath: Computer Vision for Computational and Digital Pathology",
+        "url": "https://cvpath-wacv2027.github.io/cvpath.html",
+        "startDate": "2027-01-04"
+      },
+      {
+        "@type": "Event",
+        "name": "Vision4Neuro: Neural Decoding and Computer Vision for Behavioral and Clinical Neuroscience",
+        "url": "https://cvpath-wacv2027.github.io/vision4neuro.html",
+        "startDate": "2027-01-04"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Vision for Biomedical Discovery (CVPath + Vision4Neuro)",
+    "url": "https://cvpath-wacv2027.github.io/",
+    "inLanguage": "en"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Will my paper be published in the WACV 2027 proceedings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only regular papers. Accepted 8-page regular papers are archival and appear in the WACV 2027 Workshop Proceedings on IEEE Xplore and in the CVF Open Access repository. Short papers (4 pages) and extended abstracts (2 pages) are non-archival: they are presented at the workshop but are not published, so the work remains free for submission elsewhere."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which track should I submit to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Submit to the community best placed to review your work. CVPath covers computational and digital pathology; Vision4Neuro covers neural decoding, behaviour and clinical neuroscience. Each track has its own program committee, and you select the track when you submit. If a paper genuinely spans both, write to either primary contact and we will agree on the better fit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the two tracks reviewed together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Each track runs its own reviewing process with its own program committee and criteria. The shared parts of the day are the opening, the panel, the poster session, the awards and the website."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What paper format should I use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The official WACV 2027 author kit, in LaTeX or Word, the same template as the main conference. Page limits exclude references, and supplementary material does not count towards the limit. Reviewing is double-blind, so submissions must be anonymised."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I present remotely?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. WACV 2027 does not accommodate virtual workshops or remote presentations. At least one author of each accepted contribution must register for the conference and present in person at Disney Springs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I submit work that is under review elsewhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Regular papers must be original and not substantially similar to work under review or published elsewhere, following the WACV dual-submission policy. Because short papers and extended abstracts are non-archival, they may cover work that is concurrently under review at another venue, provided the policy of that venue allows it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I take part in the OWL challenge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The challenge runs on the Grand Challenge platform, within the CVPath track. Registration and the phase dates are published on the challenge page. Taking part does not require submitting a paper, and top-ranking teams present their methods during the challenge session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to attend the whole day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, but the day is designed to reward it: the joint panel after lunch and the single combined poster session are where the two communities actually meet."
+        }
+      }
+    ]
+  }
+]</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 40 40" role="img" aria-label="Vision for Biomedical Discovery logo" focusable="false">
+  <rect width="40" height="40" rx="11" fill="url(#lg)"/>
+  <circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
+  <path d="M9.6 22.6h4.1l2.6-7.4 3 11.4 2.7-9 2.2 5h6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86268f"/><stop offset=".55" stop-color="#5b3f9c"/><stop offset="1" stop-color="#0b6e7d"/>
+    </linearGradient>
+  </defs>
+</svg>
+      <span class="brand__text">
+        <span class="brand__title">Vision for Biomedical Discovery</span>
+        <span class="brand__sub">CVPath + Vision4Neuro &middot; WACV 2027</span>
+      </span>
+    </a>
+    <div class="nav__links" id="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="cvpath.html">CVPath</a>
+      <a href="vision4neuro.html">Vision4Neuro</a>
+      <a href="program.html">Program</a>
+      <a href="challenge.html">OWL Challenge</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="organizers.html">Organizers</a>
+    </div>
+    <div class="nav__actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="badge-row">
+          <span class="badge badge--brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> Full-day workshop &middot; January 4–5, 2027</span>
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Disney Springs, Lake Buena Vista, Florida, USA</span>
+          <span class="badge badge--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 0 1-8 0Z"/><path d="M16 5h3v2a3 3 0 0 1-3 3M8 5H5v2a3 3 0 0 0 3 3"/><path d="M10 14h4l.5 4h-5Z"/><path d="M8 20h8"/></svg> Hosting the OWL challenge</span>
+        </div>
+       <div class="hero__grid hero__grid--solo">
+        <div class="hero__inner">
+        <span class="eyebrow">IEEE/CVF WACV 2027 &middot; Combined full-day workshop</span>
+        <h1>Vision for Biomedical Discovery</h1>
+        <p class="hero__acronyms"><span class="c1">CVPath</span><span class="plus">+</span><span class="c2">Vision4Neuro</span></p>
+        <p class="hero__lead">One day, two communities. CVPath brings computer vision to computational and digital pathology; Vision4Neuro brings it to neural decoding, behaviour and clinical neuroscience. Each track keeps its own call for papers and reviewing, and they meet in a joint panel and a combined poster session on what the two fields genuinely share: foundation and multimodal models, robustness under real distribution shift, and evidence of clinical readiness.</p>
+        <div class="btn-row">
+          <a class="btn btn--cvpath" href="cvpath.html">CVPath call for papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--neuro" href="vision4neuro.html">Vision4Neuro call for papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="program.html">Full-day program</a>
+        </div>
+        </div>
+
+        <!-- HERO PHOTO -- to show a photo beside the text:
+             1. put the image in assets/img/ (e.g. venue.jpg), at most ~1600 px wide
+             2. delete this comment marker and the closing one below
+             3. remove "hero__grid--solo" from the div a few lines above
+        <figure class="hero__photo">
+          <img src="assets/img/venue.jpg" alt="Disney Springs, Lake Buena Vista, Florida, the venue of WACV 2027" loading="eager" decoding="async">
+          <figcaption>Image: WACV 2027</figcaption>
+        </figure>
+        -->
+       </div>
+
+        <div class="facts">
+          <div class="fact"><p class="fact__k">When</p><p class="fact__v">January 4–5, 2027<small>Workshop days of WACV 2027; exact day to be announced</small></p></div>
+          <div class="fact"><p class="fact__k">Where</p><p class="fact__v">Disney Springs<small>Lake Buena Vista, Florida, USA &middot; in person</small></p></div>
+          <div class="fact"><p class="fact__k">Papers</p><p class="fact__v">8 / 4 / 2 pages<small>Regular papers archival in the WACV 2027 proceedings</small></p></div>
+          <div class="fact"><p class="fact__k">Paper deadline</p><p class="fact__v">October 9, 2026<small>Regular papers, 23:59 AoE (to be confirmed)</small></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg><div><strong>Call for papers is open.</strong> The OpenReview submission link will be published on this site as soon as the venue is created by the WACV 2027 workshop chairs. Deadlines marked <em>to be confirmed</em> below are the committees' current plan.</div></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="tracks">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Two tracks, one day</span>
+          <h2>Choose the track that fits your work</h2>
+          <p>The workshop is organised as two self-contained halves under a shared umbrella. Each track has its own call for papers, program committee and reviewing process, so you submit to the community that will review your work best. Everything else &mdash; opening, panel, poster session, awards &mdash; is shared.</p>
+        </div>
+        <div class="grid grid--2">
+          <article class="card track-card track-card--cvpath reveal">
+            <img class="track-card__art" src="assets/img/art-cvpath.svg" width="560" height="120" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <div class="track-card__meta">
+              <span class="track-card__name">CVPath</span>
+              <span class="tag">1st edition</span>
+              <span class="tag">Morning session</span>
+            </div>
+            <h3>Computer Vision for Computational and Digital Pathology</h3>
+            <p>Gigapixel whole-slide images, real domain shift, weak supervision and dense prediction at cellular scale are computer vision problems. With pathology foundation models now openly available, they are open to the whole WACV community, not only to groups with clinical data access.</p>
+            <div class="tag-list">
+              <span class="tag">Foundation &amp; self-supervised models</span>
+              <span class="tag">Whole-slide analysis</span>
+              <span class="tag">Nuclei &amp; cell-level vision</span>
+              <span class="tag">Beyond H&amp;E</span>
+              <span class="tag">Interpretability</span>
+              <span class="tag">Clinical translation</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--cvpath" href="cvpath.html">Call for papers</a>
+              <a class="btn btn--ghost" href="challenge.html">OWL challenge</a>
+            </div>
+          </article>
+          <article class="card track-card track-card--neuro reveal">
+            <img class="track-card__art" src="assets/img/art-neuro.svg" width="560" height="120" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <div class="track-card__meta">
+              <span class="track-card__name">Vision4Neuro</span>
+              <span class="tag">1st edition</span>
+              <span class="tag">Afternoon session</span>
+            </div>
+            <h3>Neural Decoding and Computer Vision for Behavioral and Clinical Neuroscience</h3>
+            <p>Reconstructing visual experience from brain signals, aligning vision-language representations with cortex, and reading behaviour from video: the modelling questions are computer vision questions, posed on EEG, MEG, fMRI, fNIRS, ECoG and video.</p>
+            <div class="tag-list">
+              <span class="tag">Brain-to-image &amp; brain-to-video</span>
+              <span class="tag">Encoding &amp; alignment</span>
+              <span class="tag">Multimodal neuroimaging</span>
+              <span class="tag">BCI &amp; assistive interfaces</span>
+              <span class="tag">Behavioural phenotyping</span>
+              <span class="tag">Robustness in the wild</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--neuro" href="vision4neuro.html">Call for papers</a>
+              <a class="btn btn--ghost" href="speakers.html">Invited speakers</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="themes">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Shared ground</span>
+          <h2>Why these two workshops share a day</h2>
+          <p>Tissue slides and neural recordings could hardly be more different as data. The methodological questions, however, line up closely &mdash; which is exactly what the joint panel and the combined poster session are for.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div>
+            <h3>Foundation and multimodal models</h3>
+            <p>Self-supervised pretraining on unlabelled data, vision-language alignment, and generative models are reshaping both fields at once &mdash; on gigapixel tissue and on neural signals alike.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.8 7 9 4-1.2 7-4.5 7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Robustness and generalization</h3>
+            <p>Scanner, stain and centre shift in pathology; cross-subject, cross-session and cross-device shift in neural decoding. Both need calibration, open-set awareness and honest evaluation protocols.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
+            <h3>Clinical translation</h3>
+            <p>What actually counts as evidence that a model is ready to touch patient care? The joint panel puts pathologists, neuroscientists and vision researchers in the same room on that question.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="dates">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Important dates</span>
+          <h2>Key deadlines</h2>
+          <p>The same timeline applies to both tracks, so authors face one set of dates regardless of where they submit.</p>
+        </div>
+        <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Date</th><th scope="col">Milestone</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td class="date">August 25, 2026</td><td class="what">Website and Call for Papers online</td><td><span class="pill pill--both">Both tracks</span></td></tr>
+            <tr><td class="date">October 9, 2026</td><td class="what">Regular papers (8 pages, archival) &mdash; submission deadline (23:59 AoE)</td><td><span class="pill pill--tbc">To be confirmed</span></td></tr>
+            <tr><td class="date">October 30, 2026</td><td class="what">Notification to authors, regular papers</td><td><span class="pill pill--wacv">Set by WACV</span></td></tr>
+            <tr><td class="date">November 6, 2026</td><td class="what">Short papers (4 pages) and extended abstracts (2 pages) &mdash; submission deadline (23:59 AoE)</td><td><span class="pill pill--tbc">To be confirmed</span></td></tr>
+            <tr><td class="date">November 20, 2026</td><td class="what">Notification, short papers and extended abstracts</td><td><span class="pill pill--tbc">To be confirmed</span></td></tr>
+            <tr><td class="date">November 20, 2026</td><td class="what">Camera-ready deadline, archival papers (23:59 PT)</td><td><span class="pill pill--wacv">Set by WACV</span></td></tr>
+            <tr><td class="date">January 4–5, 2027</td><td class="what">Workshop day at WACV 2027 (exact day to be announced)</td><td><span class="pill pill--wacv">Set by WACV</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted mt-s">All deadlines are 23:59 Anywhere on Earth unless stated otherwise. Dates marked <em>Set by WACV</em> are fixed by the WACV 2027 workshop chairs. Dates marked <em>To be confirmed</em> are the current plan of the organizing committees and will be finalised together with the OpenReview submission site; check this page for updates. The OWL challenge timeline is announced on the <a href="challenge.html">challenge page</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="submissions">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Submissions</span>
+          <h2>What you can submit, and what gets published</h2>
+          <p>Both tracks use the same three submission types and the same WACV 2027 paper format, so the choice of track is about audience and reviewers, not about rules.</p>
+        </div>
+        <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Submission type</th><th scope="col">Length</th><th scope="col">Proceedings</th><th scope="col">Presentation</th></tr></thead>
+          <tbody>
+            <tr><td class="what">Regular paper</td><td>8 pages (excluding references)</td><td><strong>Archival</strong> &mdash; published in the WACV 2027 Workshop Proceedings (IEEE Xplore and CVF Open Access)</td><td>Oral or poster</td></tr>
+            <tr><td class="what">Short paper</td><td>4 pages (excluding references)</td><td>Non-archival &mdash; not published in the proceedings</td><td>Poster, possibly lightning talk</td></tr>
+            <tr><td class="what">Extended abstract</td><td>2 pages (excluding references)</td><td>Non-archival &mdash; not published in the proceedings</td><td>Poster, possibly lightning talk</td></tr>
+          </tbody>
+        </table>
+      </div>
+        <div class="notice mt-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><strong>Publication in the WACV 2027 proceedings.</strong> Accepted <strong>regular papers (8 pages) are archival</strong> and will appear in the WACV 2027 Workshop Proceedings, published on IEEE Xplore and in the CVF Open Access repository. <strong>Short papers and extended abstracts are non-archival</strong>: they are presented at the workshop but not published in the proceedings, which leaves authors free to submit that work elsewhere.</div></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="challenge">
+      <div class="container">
+        <div class="callout reveal">
+          <span class="eyebrow eyebrow--cvpath">Hosted challenge</span>
+          <h2>OWL &mdash; Observing What Models Learn</h2>
+          <p class="lead mt-s">An interpretability benchmark for hypothesis-free discovery in prostate cancer histopathology. OWL asks a question ordinary leaderboards do not: when a model predicts biochemical recurrence, does its explanation actually hold up &mdash; measured with automatic faithfulness metrics <em>and</em> assessed by expert pathologists, alongside predictive performance.</p>
+          <div class="stat-row">
+            <div class="stat"><p class="stat__v">1,419</p><p class="stat__k">Prostatectomy cases from three medical centres</p></div>
+            <div class="stat"><p class="stat__v">3 axes</p><p class="stat__k">Prediction, automatic faithfulness, expert reader study</p></div>
+            <div class="stat"><p class="stat__v">60 min</p><p class="stat__k">Dedicated session with top-team presentations</p></div>
+          </div>
+          <div class="btn-row mt-m">
+            <a class="btn btn--primary" href="challenge.html">About the challenge <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="program-preview">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">The day</span>
+          <h2>A full day, built to keep both audiences in the room</h2>
+          <p>CVPath runs in the morning, including the OWL challenge session; the joint panel opens the afternoon, right after lunch, so neither community drifts away over the break; Vision4Neuro runs in the afternoon; posters from both tracks share a single session.</p>
+        </div>
+        <div class="grid grid--4">
+          <article class="card"><h4 style="color:var(--brand)">Morning</h4><p class="small mt-s"><strong>Shared opening</strong>, CVPath invited talks, CVPath orals and the one-hour OWL challenge session.</p></article>
+          <article class="card"><h4 style="color:var(--brand)">After lunch</h4><p class="small mt-s"><strong>Joint panel</strong> on robustness, generalization and clinical readiness, with speakers from both communities.</p></article>
+          <article class="card"><h4 style="color:var(--brand)">Afternoon</h4><p class="small mt-s"><strong>Combined poster session</strong> plus Vision4Neuro invited talks and oral session.</p></article>
+          <article class="card"><h4 style="color:var(--brand)">Closing</h4><p class="small mt-s"><strong>Best paper awards</strong> for both tracks and shared closing remarks.</p></article>
+        </div>
+        <div class="btn-row mt-m"><a class="btn btn--ghost" href="program.html">See the detailed schedule <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head">
+          <span class="eyebrow">For authors</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details class="qa"><summary>Will my paper be published in the WACV 2027 proceedings?</summary><div class="qa__body"><p>Only regular papers. Accepted 8-page regular papers are archival and appear in the WACV 2027 Workshop Proceedings on IEEE Xplore and in the CVF Open Access repository. Short papers (4 pages) and extended abstracts (2 pages) are non-archival: they are presented at the workshop but are not published, so the work remains free for submission elsewhere.</p></div></details>
+          <details class="qa"><summary>Which track should I submit to?</summary><div class="qa__body"><p>Submit to the community best placed to review your work. CVPath covers computational and digital pathology; Vision4Neuro covers neural decoding, behaviour and clinical neuroscience. Each track has its own program committee, and you select the track when you submit. If a paper genuinely spans both, write to either primary contact and we will agree on the better fit.</p></div></details>
+          <details class="qa"><summary>Are the two tracks reviewed together?</summary><div class="qa__body"><p>No. Each track runs its own reviewing process with its own program committee and criteria. The shared parts of the day are the opening, the panel, the poster session, the awards and the website.</p></div></details>
+          <details class="qa"><summary>What paper format should I use?</summary><div class="qa__body"><p>The official WACV 2027 author kit, in LaTeX or Word, the same template as the main conference. Page limits exclude references, and supplementary material does not count towards the limit. Reviewing is double-blind, so submissions must be anonymised.</p></div></details>
+          <details class="qa"><summary>Can I present remotely?</summary><div class="qa__body"><p>No. WACV 2027 does not accommodate virtual workshops or remote presentations. At least one author of each accepted contribution must register for the conference and present in person at Disney Springs.</p></div></details>
+          <details class="qa"><summary>Can I submit work that is under review elsewhere?</summary><div class="qa__body"><p>Regular papers must be original and not substantially similar to work under review or published elsewhere, following the WACV dual-submission policy. Because short papers and extended abstracts are non-archival, they may cover work that is concurrently under review at another venue, provided the policy of that venue allows it.</p></div></details>
+          <details class="qa"><summary>How do I take part in the OWL challenge?</summary><div class="qa__body"><p>The challenge runs on the Grand Challenge platform, within the CVPath track. Registration and the phase dates are published on the challenge page. Taking part does not require submitting a paper, and top-ranking teams present their methods during the challenge session.</p></div></details>
+          <details class="qa"><summary>Do I have to attend the whole day?</summary><div class="qa__body"><p>No, but the day is designed to reward it: the joint panel after lunch and the single combined poster session are where the two communities actually meet.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="contact">
+      <div class="container">
+        <div class="grid grid--2">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h2>Questions?</h2>
+            <p class="lead mt-s">Each track has its own primary contact. For anything concerning the day as a whole, write to either &mdash; the two committees coordinate on everything shared.</p>
+            <div class="btn-row mt-m">
+              <a class="btn btn--ghost" href="organizers.html">All organizers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+          <div class="defs">
+            <div class="def"><dt>CVPath track</dt><dd>Cristian Tommasino<br><a href="mailto:cristian.tommasino@unina.it">cristian.tommasino@unina.it</a><br><span class="small muted">DIETI, University of Naples Federico II</span></dd></div>
+            <div class="def"><dt>Vision4Neuro track</dt><dd>Marios Petrov<br><a href="mailto:mpetrov@uccs.edu">mpetrov@uccs.edu</a><br><span class="small muted">University of Colorado Colorado Springs</span></dd></div>
+            <div class="def"><dt>OWL challenge</dt><dd>See the <a href="challenge.html">challenge page</a> for participation details and the Grand Challenge link.</dd></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h4>The workshop</h4>
+        <strong style="color:var(--ink);font-size:.98rem">Vision for Biomedical Discovery</strong>
+        <p>A full-day WACV 2027 workshop joining CVPath (computational and digital pathology) and Vision4Neuro (neural decoding, behaviour and clinical neuroscience) under one umbrella, with a joint panel and a combined poster session.</p>
+      </div>
+      <div>
+        <h4>Tracks</h4>
+        <ul class="footer-links">
+          <li><a href="cvpath.html">CVPath &mdash; Call for Papers</a></li>
+          <li><a href="vision4neuro.html">Vision4Neuro &mdash; Call for Papers</a></li>
+          <li><a href="challenge.html">OWL Challenge</a></li>
+          <li><a href="index.html#dates">Important dates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workshop</h4>
+        <ul class="footer-links">
+          <li><a href="program.html">Program</a></li>
+          <li><a href="speakers.html">Invited speakers</a></li>
+          <li><a href="organizers.html">Organizers &amp; committee</a></li>
+          <li><a href="organizers.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>WACV 2027</h4>
+        <ul class="footer-links">
+          <li><a href="https://wacv.thecvf.com/Conferences/2027" rel="noopener">Conference website</a></li>
+          <li><a href="https://wacv.thecvf.com/Conferences/2027/CallForWorkshops" rel="noopener">Workshop guidelines</a></li>
+          <li><a href="https://wacv.thecvf.com/Conferences/2027/Dates" rel="noopener">Conference dates</a></li>
+          <li><a href="https://openreview.net/" rel="noopener">OpenReview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CVPath &amp; Vision4Neuro organizing committees. Workshop of the IEEE/CVF Winter Conference on Applications of Computer Vision 2027.</span>
+      <span>January 4–5, 2027 &middot; Disney Springs, Lake Buena Vista, Florida, USA</span>
+    </div>
+  </div>
+</footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

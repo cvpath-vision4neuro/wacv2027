@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OWL Challenge | Interpretable AI in Pathology, WACV 2027</title>
+  <meta name="description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence on 1,400+ whole-slide images, with expert assessment.">
+  <meta name="keywords" content="OWL challenge, interpretable AI, faithfulness, prostate cancer, biochemical recurrence, histopathology, whole-slide images, Grand Challenge, WACV 2027, CVPath">
+  <meta name="author" content="CVPath and Vision4Neuro organizing committees">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://cvpath-wacv2027.github.io/challenge.html">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vision for Biomedical Discovery (CVPath + Vision4Neuro)">
+  <meta property="og:title" content="OWL Challenge | Interpretable AI in Pathology, WACV 2027">
+  <meta property="og:description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence on 1,400+ whole-slide images, with expert assessment.">
+  <meta property="og:url" content="https://cvpath-wacv2027.github.io/challenge.html">
+  <meta property="og:image" content="https://cvpath-wacv2027.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vision for Biomedical Discovery, a full-day WACV 2027 workshop combining CVPath and Vision4Neuro">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OWL Challenge | Interpretable AI in Pathology, WACV 2027">
+  <meta name="twitter:description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence on 1,400+ whole-slide images, with expert assessment.">
+  <meta name="twitter:image" content="https://cvpath-wacv2027.github.io/assets/img/og-image.png">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0d1117">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Set the colour theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem("vbd-theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://cvpath-wacv2027.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "OWL challenge",
+      "item": "https://cvpath-wacv2027.github.io/challenge.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 40 40" role="img" aria-label="Vision for Biomedical Discovery logo" focusable="false">
+  <rect width="40" height="40" rx="11" fill="url(#lg)"/>
+  <circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
+  <path d="M9.6 22.6h4.1l2.6-7.4 3 11.4 2.7-9 2.2 5h6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86268f"/><stop offset=".55" stop-color="#5b3f9c"/><stop offset="1" stop-color="#0b6e7d"/>
+    </linearGradient>
+  </defs>
+</svg>
+      <span class="brand__text">
+        <span class="brand__title">Vision for Biomedical Discovery</span>
+        <span class="brand__sub">CVPath + Vision4Neuro &middot; WACV 2027</span>
+      </span>
+    </a>
+    <div class="nav__links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cvpath.html">CVPath</a>
+      <a href="vision4neuro.html">Vision4Neuro</a>
+      <a href="program.html">Program</a>
+      <a href="challenge.html" aria-current="page">OWL Challenge</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="organizers.html">Organizers</a>
+    </div>
+    <div class="nav__actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+  <main id="main">
+    <section class="page-head page-head--cvpath">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>OWL challenge</nav>
+        <span class="eyebrow eyebrow--cvpath">Hosted challenge &middot; CVPath track</span>
+        <h1>OWL &mdash; Observing What Models Learn</h1>
+        <p class="lead">Interpretable AI for hypothesis-free discovery in prostate cancer histopathology. OWL benchmarks how faithfully a model's explanation holds up when it predicts biochemical recurrence &mdash; not only how well it predicts.</p>
+        <div class="badge-row mt-m">
+          <span class="badge badge--cvpath">1,419 prostatectomy cases</span>
+          <span class="badge">Grand Challenge &middot; Dockerized submissions</span>
+          <span class="badge badge--gold">One-hour session at the workshop</span>
+        </div>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#why">Why OWL</a><a href="#task">The task</a><a href="#data">Data</a>
+          <a href="#evaluation">Evaluation</a><a href="#participate">How to take part</a>
+          <a href="#rules">Rules</a><a href="#timeline">Timeline</a><a href="#team">Team</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container container--narrow stack-lg">
+        <div>
+          <h2>From prediction to explanation</h2>
+          <p class="mt-s">Nearly 30&percnt; of patients experience recurrence after radical prostatectomy, and deep learning can already predict that risk directly from digitised slides &mdash; often beyond what current clinical grading captures. What those models will not tell you is <em>which</em> morphology drives the prediction, or whether they lean on a clinically meaningful structure or on a spurious correlation. Attention heatmaps are, in practice, where the explanation stops.</p>
+          <p>OWL is the next step after two earlier challenges from the same group. <strong>PANDA</strong> showed that models can reproduce a pathologist's task, Gleason grading, at expert level &mdash; but only within the ceiling of existing human-defined patterns. <strong>LEOPARD</strong> dropped the annotations and predicted recurrence from outcome data alone, with strong accuracy across international cohorts &mdash; but the winning models stayed black boxes. OWL keeps the discovery setting and adds the missing question: <strong>is the explanation any good?</strong></p>
+          <p>To our knowledge it is the first competition in biomedical imaging designed to benchmark interpretability for hypothesis-free biomarker discovery, shifting the focus from generating explanations to <em>evaluating</em> them.</p>
+        </div>
+        <div class="notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div>The scientific question behind the challenge: <strong>what kind of tissue patterns do highly performant AI recurrence-risk models actually base their predictions on?</strong></div></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="task">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow eyebrow--cvpath">The task</span>
+          <h2>Interpretable prediction of recurrence risk</h2>
+          <p>For every case, a submitted algorithm must produce three things &mdash; a prediction, where it looked, and why.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>1. Risk score</h3><p>A predicted biochemical recurrence (BCR) risk score for the case, learned under weak supervision from patient-level outcomes only.</p></article>
+          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div><h3>2. Attribution map</h3><p>A spatial attribution map highlighting the regions relevant to the prediction, as an 8-bit unsigned integer TIFF.</p></article>
+          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg></div><h3>3. Interpretability report</h3><p>A free-form PDF of at most 5 pages with a human-readable interpretation of the decision for that case: concept attributions, textual explanation, and so on.</p></article>
+        </div>
+        <p class="small muted mt-m">The difficulty is real: whole-slide images are gigapixel-scale and heterogeneous, the predictive patterns can be sparse and spread across scales, and in genuine biomarker discovery there is by definition no interpretability ground truth to compare against.</p>
+      </div>
+    </section>
+
+    <section class="section" id="data">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow eyebrow--cvpath">Data</span>
+          <h2>One of the largest prostatectomy cohorts for recurrence prediction</h2>
+          <p>H&amp;E-stained prostatectomy whole-slide images with biochemical recurrence status and time-to-event or censoring information, from three medical centres on two continents.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Split</th><th scope="col">Cases</th><th scope="col">Availability</th></tr></thead>
+            <tbody>
+              <tr><td class="what">Training</td><td class="date">508</td><td>Public, via the AWS Open Data Initiative under CC&nbsp;BY-NC-SA</td></tr>
+              <tr><td class="what">Validation</td><td class="date">50</td><td>Private, hidden from participants</td></tr>
+              <tr><td class="what">Test</td><td class="date">861</td><td>Private, internal and external cohorts, hidden from participants</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid--3 mt-m">
+          <article class="card"><h4>Radboudumc, Netherlands</h4><p class="small mt-s">Surgeries performed between 1993 and 2012.</p></article>
+          <article class="card"><h4>University Hospital Cologne, Germany</h4><p class="small mt-s">Surgeries 2015&ndash;2020, follow-up through 2023.</p></article>
+          <article class="card"><h4>Instituto de Medicina Patol&oacute;gica, Brazil</h4><p class="small mt-s">Surgeries performed in 2016, with 6 years of follow-up.</p></article>
+        </div>
+        <p class="small muted mt-m">All patient data are fully anonymised, and collection, sharing and research use were approved by the institutional review boards and ethics committees of the participating institutions. Validation and test data and labels stay hidden, and the private cohorts have not been used to develop publicly available foundation models &mdash; which keeps contamination and memorisation out of the benchmark.</p>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="evaluation">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow eyebrow--cvpath">Evaluation</span>
+          <h2>Three axes, in two stages</h2>
+          <p>No single metric can decide whether an explanation is faithful, clinically meaningful and useful for discovery, so OWL combines automatic evaluation with a structured expert reader study.</p>
+        </div>
+        <div class="defs">
+          <div class="def"><dt>Validation phase</dt><dd>Ranking by predictive performance alone, using Harrell's concordance index (C-index).</dd></div>
+          <div class="def"><dt>Test phase, qualification</dt><dd>Models are ranked by C-index on the hidden test cohort. Those above <strong>C-index 0.60</strong> advance to the interpretability stage; below that threshold the prognostic signal is too weak for the explanation to mean much.</dd></div>
+          <div class="def"><dt>Automatic faithfulness</dt><dd>Perturbation analysis: regions the attribution map marks as highly relevant are progressively removed, and the change in the model's output is compared against perturbing random regions. A larger gap means a more faithful explanation.</dd></div>
+          <div class="def"><dt>AI expert panel</dt><dd>Manuscripts, code, metrics, predictions, attribution maps and reports reviewed by at least two experts each, on Likert-scale questionnaires covering clarity, scientific plausibility, meaningful novelty, usefulness for understanding model behaviour, transferability to other pathology problems, and risk of hallucination.</dd></div>
+          <div class="def"><dt>Pathology expert panel</dt><dd>Practising pathologists and trainees independently assess 50 cases per submission, at least two experts each, on clinical meaningfulness, alignment with the image evidence, usefulness for understanding and questioning the prediction, and support for clinical understanding.</dd></div>
+          <div class="def"><dt>Final ranking</dt><dd>A weighted sum of the aggregated expert scores, with discovery-specific questions weighted higher. Ties are resolved by predictive performance, then by the faithfulness metric.</dd></div>
+        </div>
+        <p class="small muted mt-m">Reader studies run through the Grand Challenge reader-study functionality; all algorithms are executed in a controlled environment for reproducibility. Confidence intervals come from bootstrapping over patient cases, and significance from a two-sided permutation test.</p>
+      </div>
+    </section>
+
+    <section class="section" id="participate">
+      <div class="container container--narrow">
+        <div class="section__head">
+          <span class="eyebrow eyebrow--cvpath">Taking part</span>
+          <h2>How to participate</h2>
+        </div>
+        <ol class="steps">
+          <li><h4>Join on Grand Challenge</h4><p>Create a verified account, then join the challenge &mdash; joining confirms that you accept the challenge rules.</p></li>
+          <li><h4>Download the public training data</h4><p>508 training cases are available through the AWS Open Data Initiative. A starter kit provides the baseline, data loaders, Docker templates and evaluation scripts.</p></li>
+          <li><h4>Train locally, then containerise</h4><p>Models are developed on your own hardware. Wrap the trained algorithm and its weights into a Docker container: the platform runs it in an offline AWS environment, so nothing can be downloaded at inference time.</p></li>
+          <li><h4>Submit through the three phases</h4><p><strong>Debug</strong> (3 training cases, several submissions per day, logs visible) to check that cloud and local predictions match; <strong>Validation</strong> (5 submissions per team); <strong>Test</strong> (1 submission per team). Validation and test logs and data stay hidden.</p></li>
+          <li><h4>Present at the workshop</h4><p>Top-ranking teams present their methods during the one-hour OWL session in the morning program, and take part in a joint benchmark publication with up to 5 co-authors per submission.</p></li>
+        </ol>
+        <div class="notice mt-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><strong>Compute limits.</strong> During evaluation each algorithm gets an NVIDIA T4 with 16&nbsp;GB VRAM or an A10G with 24&nbsp;GB VRAM, and must finish in under 59 minutes per case. The platform enforces both.</div></div>
+        <div class="notice mt-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 0 1-8 0Z"/><path d="M16 5h3v2a3 3 0 0 1-3 3M8 5H5v2a3 3 0 0 0 3 3"/><path d="M10 14h4l.5 4h-5Z"/><path d="M8 20h8"/></svg><div><strong>Papers are optional.</strong> Challenge participants are invited, but not required, to submit a full paper to the CVPath track. Submissions by challenge participants and by organizers are handled by independent chairs, so that nobody reviews their own work.</div></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="rules">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow eyebrow--cvpath">Rules</span>
+          <h2>Rules in brief</h2>
+          <p>The full and authoritative rules live on the challenge website; this is the short version.</p>
+        </div>
+        <ul class="topics topics--cvpath">
+          <li>Every participant belongs to exactly one team; a team may consist of a single participant.</li>
+          <li>Anonymous participation is not allowed: to appear on the leaderboards, real names and affiliations must be shown on a verified Grand Challenge profile.</li>
+          <li>Members of the organizing and sponsoring centres may take part, but are not eligible for prizes or for the final ranking.</li>
+          <li>This is a code-execution challenge: you submit a Docker container, not prediction files. Containers run offline, with no internet access, so all weights and resources must be inside the image.</li>
+          <li>External data and pre-trained models are allowed when freely and publicly available under a permissive open-source licence, and must be declared in the algorithm name, the algorithm page or a supporting publication.</li>
+          <li>The final submission must be accompanied by a methodology manuscript (template provided), a URL to the source code under a permissive licence, and a copy of the submitted container.</li>
+          <li>Participants must respect the compute limits and the publication embargo period. The organizers may disqualify unfair or dishonest practice at any point.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow eyebrow--cvpath">Timeline</span>
+          <h2>Challenge schedule</h2>
+          <p>Separate from the CVPath paper deadlines, which are listed on the <a href="cvpath.html#dates">CVPath page</a>.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Phase</th><th scope="col">What happens</th><th scope="col">Dates</th></tr></thead>
+            <tbody>
+              <tr><td class="what">Launch</td><td>Starter kit, baseline, data loaders, Docker templates and evaluation scripts released; registration opens on Grand Challenge</td><td><span class="pill pill--tbc">To be announced</span></td></tr>
+              <tr><td class="what">Debug</td><td>3 training cases, several submissions per day, execution logs visible, to check that cloud and local predictions match</td><td><span class="pill pill--tbc">To be announced</span></td></tr>
+              <tr><td class="what">Validation</td><td>Up to 5 submissions per team on the hidden validation cohort, ranked by C-index</td><td><span class="pill pill--tbc">To be announced</span></td></tr>
+              <tr><td class="what">Test</td><td>One submission per team on the hidden test cohort; models above C-index 0.60 qualify for the interpretability stage</td><td><span class="pill pill--tbc">To be announced</span></td></tr>
+              <tr><td class="what">Expert reader study</td><td>AI and pathology panels assess the qualifying submissions</td><td><span class="pill pill--tbc">To be announced</span></td></tr>
+              <tr><td class="what">Results</td><td>Final ranking and presentations by the top-ranking teams in the OWL session</td><td>Workshop day, January 2027</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted mt-s">The phase dates are being set for this edition of the challenge and are published on the challenge website, which is authoritative; changes are announced there and on the challenge forum. This page is updated as soon as the schedule is fixed.</p>
+        <div class="btn-row mt-m">
+          <a class="btn btn--cvpath" href="https://owl.grand-challenge.org/" rel="noopener">owl.grand-challenge.org <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="https://github.com/DIAGNijmegen/owl-challenge" rel="noopener">Starter kit on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="team">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow eyebrow--cvpath">Who runs it</span>
+          <h2>Challenge organizing team</h2>
+          <p>Bringing together computational pathology, explainable AI and clinical uropathology, with previous benchmarks including PANDA, CAMELYON and LEOPARD. The panel of clinical evaluators is larger than the list below and is finalised before the manual evaluation phase.</p>
+        </div>
+        <div class="people">
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">KF</span>
+        <div>
+        <h3 class="person__name">Khrystyna Faryna</h3>
+        <p class="person__aff">Radboud University Medical Center, The Netherlands</p>
+        <p class="person__role person__role--cvpath">Challenge administration</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">GL</span>
+        <div>
+        <h3 class="person__name">Geert Litjens</h3>
+        <p class="person__aff">Radboud University Medical Center, The Netherlands</p>
+        <p class="person__role person__role--cvpath">Coordination, data</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">JL</span>
+        <div>
+        <h3 class="person__name">Jeroen van der Laak</h3>
+        <p class="person__aff">Radboud University Medical Center, The Netherlands</p>
+        <p class="person__role person__role--cvpath">Organizer</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">CG</span>
+        <div>
+        <h3 class="person__name">Cl&eacute;ment Grisi</h3>
+        <p class="person__aff">Radboud University Medical Center, The Netherlands</p>
+        <p class="person__role person__role--cvpath">Baseline, beta testing</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">SS</span>
+        <div>
+        <h3 class="person__name">Susu Sun</h3>
+        <p class="person__aff">University of T&uuml;bingen, Germany</p>
+        <p class="person__role person__role--cvpath">Baseline, AI evaluation</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">VB</span>
+        <div>
+        <h3 class="person__name">Valentyn Boreiko</h3>
+        <p class="person__aff">Amazon AGI, Germany</p>
+        <p class="person__role person__role--cvpath">AI evaluation</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">CG</span>
+        <div>
+        <h3 class="person__name">Camila Gonz&aacute;lez</h3>
+        <p class="person__aff">Medical University of Vienna, Austria</p>
+        <p class="person__role person__role--cvpath">AI evaluation</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">YT</span>
+        <div>
+        <h3 class="person__name">Yurii Tolkach</h3>
+        <p class="person__aff">University Hospital Cologne, Germany</p>
+        <p class="person__role person__role--cvpath">Data, clinical evaluation</p>
+        </div></article>
+          <article class="person">
+        <span class="avatar avatar--cvpath" aria-hidden="true">PS</span>
+        <div>
+        <h3 class="person__name">Paulo Salles</h3>
+        <p class="person__aff">Instituto de Medicina Patol&oacute;gica, Brazil</p>
+        <p class="person__role person__role--cvpath">Data, clinical evaluation</p>
+        </div></article>
+        </div>
+        <div class="notice mt-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div>The baseline is a multiple-instance-learning model with a foundation-model encoder and attention-based interpretability. Questions about the challenge go through the Grand Challenge forum or private chat; for anything about the workshop session, see the <a href="organizers.html#contact">contact page</a>.</div></div>
+        <div class="btn-row mt-m">
+          <a class="btn btn--ghost" href="cvpath.html">CVPath call for papers</a>
+          <a class="btn btn--ghost" href="program.html">Workshop program</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h4>The workshop</h4>
+        <strong style="color:var(--ink);font-size:.98rem">Vision for Biomedical Discovery</strong>
+        <p>A full-day WACV 2027 workshop joining CVPath (computational and digital pathology) and Vision4Neuro (neural decoding, behaviour and clinical neuroscience) under one umbrella, with a joint panel and a combined poster session.</p>
+      </div>
+      <div>
+        <h4>Tracks</h4>
+        <ul class="footer-links">
+          <li><a href="cvpath.html">CVPath &mdash; Call for Papers</a></li>
+          <li><a href="vision4neuro.html">Vision4Neuro &mdash; Call for Papers</a></li>
+          <li><a href="challenge.html">OWL Challenge</a></li>
+          <li><a href="index.html#dates">Important dates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workshop</h4>
+        <ul class="footer-links">
+          <li><a href="program.html">Program</a></li>
+          <li><a href="speakers.html">Invited speakers</a></li>
+          <li><a href="organizers.html">Organizers &amp; committee</a></li>
+          <li><a href="organizers.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>WACV 2027</h4>
+        <ul class="footer-links">
+          <li><a href="https://wacv.thecvf.com/Conferences/2027" rel="noopener">Conference website</a></li>
+          <li><a href="https://wacv.thecvf.com/Conferences/2027/CallForWorkshops" rel="noopener">Workshop guidelines</a></li>
+          <li><a href="https://wacv.thecvf.com/Conferences/2027/Dates" rel="noopener">Conference dates</a></li>
+          <li><a href="https://openreview.net/" rel="noopener">OpenReview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CVPath &amp; Vision4Neuro organizing committees. Workshop of the IEEE/CVF Winter Conference on Applications of Computer Vision 2027.</span>
+      <span>January 4–5, 2027 &middot; Disney Springs, Lake Buena Vista, Florida, USA</span>
+    </div>
+  </div>
+</footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
