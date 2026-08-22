@@ -29,7 +29,6 @@ assets/img/             Favicons, social preview image, track artwork
 
 robots.txt, sitemap.xml, site.webmanifest   SEO and icon metadata
 .nojekyll                                    Tells GitHub Pages to serve files as they are
-TODO.md                                      Open items, grouped by who has to answer
 ```
 
 The WACV workshop guidelines require a call for papers, submission instructions,
@@ -67,13 +66,13 @@ name, affiliation and the two initials in the coloured square.
 
 ## 3. Before the site goes public
 
-1. **Replace the placeholder address.** Every page currently declares
-   `https://cvpath-wacv2027.github.io` as its public address, in the canonical
-   link, the social tags, the structured data and `sitemap.xml` / `robots.txt`.
-   Once you know the real URL, find and replace that string across all files
-   (8 HTML files, `sitemap.xml`, `robots.txt`). Internal links are all relative,
-   so the site works either way — getting this right only affects link previews
-   and clean indexing.
+1. **The public address is already set** to
+   `https://cvpath-vision4neuro.github.io/wacv2027`, in the canonical links, the
+   social tags, the structured data and `sitemap.xml` / `robots.txt`. If it ever
+   changes — a custom domain, a different repository — find and replace that
+   string across the 8 HTML files, `sitemap.xml` and `robots.txt`. Internal links
+   are all relative, so the site keeps working either way; the address only
+   affects link previews and clean indexing.
 2. **Confirm the deadlines marked "to be confirmed"** on the site: regular papers
    October 9, 2026; short papers and extended abstracts November 6, 2026;
    non-archival notification November 20, 2026. Fixed by WACV: notification
@@ -83,7 +82,9 @@ name, affiliation and the two initials in the coloured square.
    `cvpath.html` and `vision4neuro.html`.
 4. **Double-blind reviewing** is stated in the submission instructions. Change it
    if either track decides otherwise.
-5. See `TODO.md` for the full list, grouped by who has to answer.
+5. Speaker talk titles, the Vision4Neuro program committee and organizer bios
+   are still to be filled in, and the OWL challenge dates are marked "to be
+   announced" until the new timeline is set.
 
 ## 4. Looking at the site locally
 
@@ -93,25 +94,27 @@ For something closer to production, use any static server: the *Live Server*
 extension in VS Code (right-click `index.html` → *Open with Live Server*) is the
 simplest.
 
-## 5. Publishing on GitHub Pages
+## 5. Publishing
+
+The site lives in the `wacv2027` repository of the `cvpath-vision4neuro`
+organization, and is served by GitHub Pages from the `main` branch, root folder,
+at `https://cvpath-vision4neuro.github.io/wacv2027/`.
+
+To publish a change: commit and push to `main`. The live site follows within a
+minute or two.
 
 ```bash
-git init
-git add .
-git commit -m "WACV 2027 workshop website"
-git branch -M main
-git remote add origin https://github.com/<org>/<repo>.git
-git push -u origin main
+git add -A
+git commit -m "Update the important dates"
+git push
 ```
 
-Then in the repository: **Settings → Pages → Build and deployment → Deploy from a
-branch → `main` / `(root)`**. The site is online a couple of minutes later.
+If Pages is ever switched off, re-enable it under **Settings → Pages → Build and
+deployment → Deploy from a branch → `main` / `(root)`**. Co-organizers get write
+access under **Settings → Collaborators and teams**.
 
-- Repository named `<org>.github.io` → the site is at `https://<org>.github.io/`
-- Any other name → `https://<org>.github.io/<repo>/`
-
-Give the co-organizers write access under **Settings → Collaborators**, so anyone
-can fix their own section.
+Keeping each edition in its own repository means this address stays valid for
+good: a future edition becomes a new repository, and no link ever breaks.
 
 For a custom domain, add a file named `CNAME` containing the domain, point the
 DNS at GitHub Pages, and update the address as in section 3.

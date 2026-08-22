@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cvpath-wacv2027.github.io/sitemap.xml
+Sitemap: https://cvpath-vision4neuro.github.io/wacv2027/sitemap.xml
