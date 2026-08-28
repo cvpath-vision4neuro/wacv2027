@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OWL Challenge | Interpretable AI in Pathology, WACV 2027</title>
-  <meta name="description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence on 1,400+ whole-slide images, with expert assessment.">
+  <meta name="description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence.">
   <meta name="keywords" content="OWL challenge, interpretable AI, faithfulness, prostate cancer, biochemical recurrence, histopathology, whole-slide images, Grand Challenge, WACV 2027, CVPath">
   <meta name="author" content="CVPath and Vision4Neuro organizing committees">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Vision for Biomedical Discovery (CVPath + Vision4Neuro)">
   <meta property="og:title" content="OWL Challenge | Interpretable AI in Pathology, WACV 2027">
-  <meta property="og:description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence on 1,400+ whole-slide images, with expert assessment.">
+  <meta property="og:description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence.">
   <meta property="og:url" content="https://cvpath-vision4neuro.github.io/wacv2027/challenge.html">
   <meta property="og:image" content="https://cvpath-vision4neuro.github.io/wacv2027/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="OWL Challenge | Interpretable AI in Pathology, WACV 2027">
-  <meta name="twitter:description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence on 1,400+ whole-slide images, with expert assessment.">
+  <meta name="twitter:description" content="OWL benchmarks the interpretability of models predicting prostate cancer biochemical recurrence.">
   <meta name="twitter:image" content="https://cvpath-vision4neuro.github.io/wacv2027/assets/img/og-image.png">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -127,9 +127,8 @@
       <div class="container container--narrow stack-lg">
         <div>
           <h2>From prediction to explanation</h2>
-          <p class="mt-s">Nearly 30&percnt; of patients experience recurrence after radical prostatectomy, and deep learning can already predict that risk directly from digitised slides &mdash; often beyond what current clinical grading captures. What those models will not tell you is <em>which</em> morphology drives the prediction, or whether they lean on a clinically meaningful structure or on a spurious correlation. Attention heatmaps are, in practice, where the explanation stops.</p>
-          <p>OWL is the next step after two earlier challenges from the same group. <strong>PANDA</strong> showed that models can reproduce a pathologist's task, Gleason grading, at expert level &mdash; but only within the ceiling of existing human-defined patterns. <strong>LEOPARD</strong> dropped the annotations and predicted recurrence from outcome data alone, with strong accuracy across international cohorts &mdash; but the winning models stayed black boxes. OWL keeps the discovery setting and adds the missing question: <strong>is the explanation any good?</strong></p>
-          <p>To our knowledge it is the first competition in biomedical imaging designed to benchmark interpretability for hypothesis-free biomarker discovery, shifting the focus from generating explanations to <em>evaluating</em> them.</p>
+          <p class="mt-s">Nearly 30&percnt; of patients experience recurrence after radical prostatectomy, and deep learning can already predict that risk directly from digitised slides, often beyond what current clinical grading captures. What those models will not tell you is which morphology drives the prediction, or whether they lean on a clinically meaningful structure or on a spurious correlation.</p>
+          <p>OWL builds upon earlier challenges from the same group. <strong>PANDA</strong> showed that models can reproduce a pathologist's task, Gleason grading, at expert level, but only within the ceiling of existing human-defined patterns. <strong>LEOPARD</strong> dropped the annotations and predicted recurrence from outcome data alone, with strong predictive accuracy across international cohorts, but the winning models stayed black boxes. OWL keeps the discovery setting and adds the missing question: <strong>is the explanation any good?</strong></p>
         </div>
         <div class="notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div>The scientific question behind the challenge: <strong>what kind of tissue patterns do highly performant AI recurrence-risk models actually base their predictions on?</strong></div></div>
       </div>
@@ -186,11 +185,11 @@
         </div>
         <div class="defs">
           <div class="def"><dt>Validation phase</dt><dd>Ranking by predictive performance alone, using Harrell's concordance index (C-index).</dd></div>
-          <div class="def"><dt>Test phase, qualification</dt><dd>Models are ranked by C-index on the hidden test cohort. Those above <strong>C-index 0.60</strong> advance to the interpretability stage; below that threshold the prognostic signal is too weak for the explanation to mean much.</dd></div>
+          <div class="def"><dt>Test phase, qualification</dt><dd>Models are ranked by C-index on the hidden test cohort. Those above <strong>C-index 0.65</strong> advance to the interpretability stage; below that threshold the prognostic signal is too weak for the explanation to mean much.</dd></div>
           <div class="def"><dt>Automatic faithfulness</dt><dd>Perturbation analysis: regions the attribution map marks as highly relevant are progressively removed, and the change in the model's output is compared against perturbing random regions. A larger gap means a more faithful explanation.</dd></div>
           <div class="def"><dt>AI expert panel</dt><dd>Manuscripts, code, metrics, predictions, attribution maps and reports reviewed by at least two experts each, on Likert-scale questionnaires covering clarity, scientific plausibility, meaningful novelty, usefulness for understanding model behaviour, transferability to other pathology problems, and risk of hallucination.</dd></div>
-          <div class="def"><dt>Pathology expert panel</dt><dd>Practising pathologists and trainees independently assess 50 cases per submission, at least two experts each, on clinical meaningfulness, alignment with the image evidence, usefulness for understanding and questioning the prediction, and support for clinical understanding.</dd></div>
-          <div class="def"><dt>Final ranking</dt><dd>A weighted sum of the aggregated expert scores, with discovery-specific questions weighted higher. Ties are resolved by predictive performance, then by the faithfulness metric.</dd></div>
+          <div class="def"><dt>Pathology expert panel</dt><dd>Practising pathologists and trainees independently assess a subset of cases per submission, at least two experts each, on clinical meaningfulness, alignment with the image evidence, usefulness for understanding and questioning the prediction, and support for clinical understanding.</dd></div>
+          <div class="def"><dt>Final ranking</dt><dd>A weighted sum of the aggregated scores. </dd></div>
         </div>
         <p class="small muted mt-m">Reader studies run through the Grand Challenge reader-study functionality; all algorithms are executed in a controlled environment for reproducibility. Confidence intervals come from bootstrapping over patient cases, and significance from a two-sided permutation test.</p>
       </div>
