@@ -504,6 +504,7 @@ td.what { font-weight: 500; color: var(--ink); }
 .pc-list { columns: 2; column-gap: 34px; list-style: none; padding: 0; font-size: .95rem; }
 .pc-list li { break-inside: avoid; padding: 8px 0; border-bottom: 1px solid var(--line); color: var(--ink-3); }
 .pc-list li b { color: var(--ink); font-weight: 600; }
+.pc-list--single { columns: 1; margin-top: 10px; }
 @media (max-width: 700px) { .pc-list { columns: 1; } }
 
 /* ---------- Callout ---------- */
