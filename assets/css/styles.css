@@ -184,7 +184,7 @@ p + p { margin-top: 1em; }
 }
 .nav { display: flex; align-items: center; gap: 16px; min-height: var(--nav-h); }
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); flex: 0 1 auto; min-width: 0; }
-.brand__mark { width: 34px; height: 34px; flex: 0 0 auto; }
+.brand__mark { width: 44px; height: auto; flex: 0 0 auto; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.14; min-width: 0; }
 .brand__title { font-family: var(--font-serif); font-weight: 600; font-size: 1.02rem; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .brand__sub { font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
@@ -236,7 +236,7 @@ p + p { margin-top: 1em; }
 @media (max-width: 400px) {
   .brand__sub { display: none; }
   .brand__title { font-size: .84rem; white-space: normal; line-height: 1.15; }
-  .brand__mark { width: 30px; height: 30px; }
+  .brand__mark { width: 36px; height: auto; }
   .container { padding-inline: 18px; }
 }
 
