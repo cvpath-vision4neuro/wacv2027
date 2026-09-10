@@ -601,6 +601,18 @@ details.qa .qa__body > * + * { margin-top: 10px; }
   font-size: .85rem; color: var(--ink-3);
 }
 
+/* ---------- Funding / acknowledgement ---------- */
+.funding__logos {
+  background: #ffffff;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: clamp(18px, 3vw, 30px);
+  display: grid; gap: clamp(16px, 2.5vw, 26px); justify-items: center;
+}
+.funding__logos img { width: 100%; height: auto; }
+.funding__logos .funding__lockup { max-width: 560px; }
+.funding__logos .funding__strip { max-width: 760px; }
+
 /* ---------- Reveal ---------- */
 .reveal { opacity: 0; transform: translateY(14px); }
 .reveal.is-visible { opacity: 1; transform: none; transition: opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1); }
