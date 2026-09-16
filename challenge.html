@@ -68,16 +68,13 @@
 <header class="site-header">
   <nav class="container nav" aria-label="Main">
     <a class="brand" href="index.html">
-      <svg class="brand__mark" viewBox="0 0 40 40" role="img" aria-label="Vision for Biomedical Discovery logo" focusable="false">
-  <rect width="40" height="40" rx="11" fill="url(#lg)"/>
-  <circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
-  <path d="M9.6 22.6h4.1l2.6-7.4 3 11.4 2.7-9 2.2 5h6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <defs>
-    <linearGradient id="lg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#86268f"/><stop offset=".55" stop-color="#5b3f9c"/><stop offset="1" stop-color="#0b6e7d"/>
-    </linearGradient>
-  </defs>
-</svg>
+      <svg class="brand__mark" viewBox="8 36 184 128" role="img" aria-label="Vision for Biomedical Discovery logo" focusable="false">
+        <defs><clipPath id="vbdClip"><circle cx="72" cy="100" r="58"/></clipPath></defs>
+        <circle cx="72" cy="100" r="58" fill="#86268f" opacity=".92"/>
+        <circle cx="128" cy="100" r="58" fill="#0b6e7d" opacity=".92"/>
+        <circle cx="128" cy="100" r="58" fill="#1d3a8a" clip-path="url(#vbdClip)"/>
+        <circle cx="100" cy="100" r="13" fill="#ffffff"/>
+      </svg>
       <span class="brand__text">
         <span class="brand__title">Vision for Biomedical Discovery</span>
         <span class="brand__sub">CVPath + Vision4Neuro &middot; WACV 2027</span>
@@ -138,12 +135,15 @@
         <div class="section__head">
           <span class="eyebrow eyebrow--cvpath">The task</span>
           <h2>Interpretable prediction of recurrence risk</h2>
-          <p>For every case, a submitted algorithm must produce three things &mdash; a prediction, where it looked, and why.</p>
+          <p>For every case, a submitted algorithm must produce four things &mdash; a prediction, where it looked, and why.</p>
         </div>
         <div class="grid grid--3">
-          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>1. Risk score</h3><p>A predicted biochemical recurrence (BCR) risk score for the case, learned under weak supervision from patient-level outcomes only.</p></article>
-          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div><h3>2. Attribution map</h3><p>A spatial attribution map highlighting the regions relevant to the prediction, as an 8-bit unsigned integer TIFF.</p></article>
-          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg></div><h3>3. Interpretability report</h3><p>A free-form PDF of at most 5 pages with a human-readable interpretation of the decision for that case: concept attributions, textual explanation, and so on.</p></article>
+           <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>1. Time to BCR in years</h3><p>A predicted time-to-biochemical recurrence (BCR) risk score for the case, learned under weak supervision from patient-level outcomes only.</p></article>
+          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>2. Risk score</h3><p>A predicted biochemical recurrence (BCR) risk score ("low", "medium", "high") for the case, learned under weak supervision from patient-level outcomes only. This score should be derived from the participant's algorithm's own time-to-recurrence predictions.
+
+</p></article>
+          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div><h3>3. Attribution map</h3><p>A spatial attribution map highlighting the regions relevant to the prediction, as an 8-bit unsigned integer TIFF.</p></article>
+          <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg></div><h3>4. Interpretability report</h3><p>A free-form PDF of at most 5 pages with a human-readable interpretation of the decision for that case: concept attributions, textual explanation, and so on.</p></article>
         </div>
         <p class="small muted mt-m">The difficulty is real: whole-slide images are gigapixel-scale and heterogeneous, the predictive patterns can be sparse and spread across scales, and in genuine biomarker discovery there is by definition no interpretability ground truth to compare against.</p>
       </div>
