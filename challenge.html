@@ -135,10 +135,10 @@
         <div class="section__head">
           <span class="eyebrow eyebrow--cvpath">The task</span>
           <h2>Interpretable prediction of recurrence risk</h2>
-          <p>For every case, a submitted algorithm must produce four things &mdash; a prediction, where it looked, and why.</p>
+          <p>For every case, a submitted algorithm must produce four things &mdash; how long, how likely, where it looked, and why.</p>
         </div>
         <div class="grid grid--3">
-           <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>1. Time to BCR in years</h3><p>A predicted time-to-biochemical recurrence (BCR) risk score for the case, learned under weak supervision from patient-level outcomes only.</p></article>
+           <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>1. Time to BCR in years</h3><p>A predicted time to biochemical recurrence (BCR), in years, for the case, learned under weak supervision from patient-level outcomes only.</p></article>
           <article class="card"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>2. Risk score</h3><p>A predicted biochemical recurrence (BCR) risk score ("low", "medium", "high") for the case, learned under weak supervision from patient-level outcomes only. This score should be derived from the participant's algorithm's own time-to-recurrence predictions.
 
 </p></article>
@@ -169,7 +169,7 @@
           <article class="card"><h4>University Hospital Cologne, Germany</h4></article>
           <article class="card"><h4>Instituto de Medicina Patol&oacute;gica, Brazil</h4></article>
         </div>
-        <p class="small muted mt-m">All patient data are fully anonymised, and collection, sharing and research use were approved by the institutional review boards and ethics committees of the participating institutions. Validation and test data and labels stay hidden, and the private cohorts have not been used to develop publicly available foundation models &mdash; which keeps contamination and memorisation out of the benchmark.</p>
+        <p class="small muted mt-m">All patient data are fully anonymised, and collection, sharing and research use were approved by the institutional review boards and ethics committees of the participating institutions. Test data and labels stay hidden, and the private cohorts have not been used to develop publicly available foundation models &mdash; which keeps contamination and memorisation out of the benchmark.</p>
       </div>
     </section>
 
@@ -184,7 +184,7 @@
           <div class="def"><dt>Debug phase</dt><dd>Participants can submit their containers for a sanity check on training cases to see if the output on the platform matches the local one.</dd></div>
           <div class="def"><dt>Test phase, qualification</dt><dd>Models are ranked by C-index on the hidden test cohort. Those above <strong>C-index 0.65</strong> advance to the interpretability stage; below that threshold the prognostic signal is too weak for the explanation to mean much.</dd></div>
           <div class="def"><dt>Automatic faithfulness</dt><dd>Perturbation analysis: regions the attribution map marks as highly relevant are progressively removed, and the change in the model's output is compared against perturbing random regions. A larger gap means a more faithful explanation.</dd></div>
-          <div class="def"><dt>AI expert panel</dt><dd>Manuscripts, code, metrics, predictions, attribution maps and reports reviewed by at least two experts each, on Likert-scale questionnaires covering clarity, scientific plausibility, meaningful novelty, usefulness for understanding model behaviour, transferability to other pathology problems, and risk of hallucination.</dd></div>
+          <div class="def"><dt>AI expert panel</dt><dd>Manuscripts, code, metrics, predictions, attribution maps and reports reviewed by at least three experts each, on Likert-scale questionnaires covering relevance and applicability for hypothesis-free scientific discovery, clarity, scientific plausibility, meaningful novelty, usefulness for understanding model behaviour, transferability to other pathology problems, and risk of hallucination.</dd></div>
           <div class="def"><dt>Pathology expert panel</dt><dd>Practising pathologists and trainees independently assess a subset of cases per submission, at least two experts each, on clinical meaningfulness, alignment with the image evidence, usefulness for understanding and questioning the prediction, and support for clinical understanding.</dd></div>
           <div class="def"><dt>Final ranking</dt><dd>A weighted sum of the aggregated scores. </dd></div>
         </div>
@@ -206,7 +206,7 @@
           <li><h4>Present at the workshop</h4><p>Top-ranking teams present their methods during the one-hour OWL session in the morning program, and take part in a joint benchmark publication with up to 5 co-authors per submission.</p></li>
         </ol>
         <div class="notice mt-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><strong>Compute limits.</strong> During evaluation each algorithm gets an NVIDIA T4 with 16&nbsp;GB VRAM or an A10G with 24&nbsp;GB VRAM, and must finish in under 59 minutes per case. The platform enforces both.</div></div>
-        <div class="notice mt-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 0 1-8 0Z"/><path d="M16 5h3v2a3 3 0 0 1-3 3M8 5H5v2a3 3 0 0 0 3 3"/><path d="M10 14h4l.5 4h-5Z"/><path d="M8 20h8"/></svg><div><strong>Papers are optional.</strong> Challenge participants are invited, but not required, to submit a full paper to the CVPath track. Submissions by challenge participants and by organizers are handled by independent chairs, so that nobody reviews their own work.</div></div>
+        <div class="notice mt-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 0 1-8 0Z"/><path d="M16 5h3v2a3 3 0 0 1-3 3M8 5H5v2a3 3 0 0 0 3 3"/><path d="M10 14h4l.5 4h-5Z"/><path d="M8 20h8"/></svg><div><strong>Papers are optional.</strong> Challenge participants are invited, but not required, to submit a short paper (4 pages, non-archival) to the CVPath track. Non-archival submissions are explicitly excluded from the OWL publication embargo. Note that the CVPath short paper deadline (November 6, 2026) precedes the closing of the testing leaderboard (November 30, 2026), so these papers describe the method and results on the public training data only. Submissions by challenge participants and by organizers are handled by independent chairs, so that nobody reviews their own work.</div></div>
       </div>
     </section>
 
@@ -220,11 +220,14 @@
         <ul class="topics topics--cvpath">
           <li>Every participant belongs to exactly one team; a team may consist of a single participant.</li>
           <li>Anonymous participation is not allowed: to appear on the leaderboards, real names and affiliations must be shown on a verified Grand Challenge profile.</li>
-          <li>Members of the organizing and sponsoring centres may take part, but are not eligible for prizes or for the final ranking.</li>
+          <li>Members of the organizing and sponsoring centres may take part, but are not eligible for prizes or for the final ranking in the Closed Testing Phase.</li>
           <li>This is a code-execution challenge: you submit a Docker container, not prediction files. Containers run offline, with no internet access, so all weights and resources must be inside the image.</li>
           <li>External data and pre-trained models are allowed when freely and publicly available under a permissive open-source licence, and must be declared in the algorithm name, the algorithm page or a supporting publication.</li>
-          <li>The final submission must be accompanied by a methodology manuscript (template provided), a URL to the source code under a permissive licence, and a copy of the submitted container.</li>
-          <li>Participants must respect the compute limits and the publication embargo period. The organizers may disqualify unfair or dishonest practice at any point.</li>
+          <li>To enter the Interpretability Evaluation Phase, participants attach a methodology manuscript of 4 pages in the official WACV 2027 template (excluding references), a URL to their source code on GitHub under a permissive licence, and send the .tar file of the submitted algorithm to the organizers.</li>
+          <li>Participants must respect the compute limits and the publication embargo period, which also applies to non-participating researchers using the public training data. Non-archival short paper submissions to the CVPath workshop are excluded from the embargo. The organizers may disqualify unfair or dishonest practice at any point.</li>
+          <li>Participating with multiple or duplicate Grand Challenge profiles leads to disqualification.</li>
+          <li>Participants may withdraw at any time, but cannot retract submissions or results published up to that point.</li>
+          <li>The competition is open worldwide, except where EU sanctions on the transfer of funds and goods apply.</li>
         </ul>
       </div>
     </section>
@@ -240,11 +243,12 @@
           <table>
             <thead><tr><th scope="col">Phase</th><th scope="col">What happens</th></tr></thead>
             <tbody>
-              <tr><td class="what">27.08.2026 - 20.11.2026 Launch</td><td>Starter kit, baseline, data loaders, Docker templates and evaluation scripts released; registration opens on Grand Challenge</td></tr>
-              <tr><td class="what">20.09.2026 - 20.11.2026 Debug</td><td>Sanity check of submissions.</td></tr>
-              <tr><td class="what">20.10.2026 - 20.11.2026 Test</td><td>One submission per team on the hidden test cohort; models above C-index 0.60 qualify for the interpretability stage</td></tr>
+              <tr><td class="what">22.08.2026 Announcement</td><td>OWL announced in conjunction with WACV 2027 and the CVPath workshop; starter kit, baseline, data loaders, Docker templates and evaluation scripts released; registration opens on Grand Challenge</td></tr>
+              <tr><td class="what">Debug</td><td>Sanity check of submissions (dates on the challenge website)</td></tr>
+              <tr><td class="what">16.10.2026 - 30.11.2026 Test</td><td>One submission per team on the hidden test cohort; models above C-index 0.65 qualify for the interpretability stage</td></tr>
               <tr><td class="what">Expert reader study</td><td>AI and pathology panels assess the qualifying submissions</td></tr>
-              <tr><td class="what">Results</td><td>Results announcement, ranking and presentations by the top-ranking teams in the OWL session, on the CVPATH workshop day</td></tr>
+              <tr><td class="what">15.12.2026 Finalists</td><td>Invitations to finalists and speakers sent</td></tr>
+              <tr><td class="what">04-05.01.2027 Results</td><td>Winners announced, ranking and presentations by the top-ranking teams in the OWL session, on the workshop day</td></tr>
             </tbody>
           </table>
         </div>
@@ -279,28 +283,28 @@
         <p class="person__role person__role--cvpath">Coordination, data</p>
         </div></article>
           <article class="person">
-        <span class="avatar avatar--cvpath" aria-hidden="true">JL</span>
+        <span class="avatar avatar--cvpath" aria-hidden="true">CG</span>
         <div>
         <h3 class="person__name">Cl&eacute;ment Grisi</h3>
         <p class="person__aff">Radboud University Medical Center, The Netherlands</p>
         <p class="person__role person__role--cvpath">Baseline</p>
         </div></article>
           <article class="person">
-        <span class="avatar avatar--cvpath" aria-hidden="true">SS</span>
+        <span class="avatar avatar--cvpath" aria-hidden="true">NU</span>
         <div>
         <h3 class="person__name">Nefise Uysal</h3>
         <p class="person__aff">Radboud University Medical Center, The Netherlands</p>
         <p class="person__role person__role--cvpath">beta testing</p>
         </div></article>
           <article class="person">
-        <span class="avatar avatar--cvpath" aria-hidden="true">CG</span>
+        <span class="avatar avatar--cvpath" aria-hidden="true">ZL</span>
         <div>
         <h3 class="person__name">Zheyan Lin</h3>
         <p class="person__aff">Radboud University Medical Center, The Netherlands</p>
         <p class="person__role person__role--cvpath">Baseline</p>
         </div></article>
           <article class="person">
-        <span class="avatar avatar--cvpath" aria-hidden="true">CG</span>
+        <span class="avatar avatar--cvpath" aria-hidden="true">SS</span>
         <div>
         <h3 class="person__name">Susu Sun</h3>
         <p class="person__aff">University of T&uuml;bingen, Germany</p>
