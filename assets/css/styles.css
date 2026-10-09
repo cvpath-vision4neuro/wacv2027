@@ -431,6 +431,7 @@ thead th {
 tbody td { padding: 15px 20px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--ink-2); }
 tbody tr:last-child td { border-bottom: 0; }
 td.date { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); white-space: nowrap; }
+td.date del { display: block; font-weight: 500; color: var(--ink-3); }
 td.what { font-weight: 500; color: var(--ink); }
 .pill { display: inline-block; font-size: .72rem; font-weight: 650; letter-spacing: .04em; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
 .pill--cvpath { background: var(--cvpath-soft); color: var(--cvpath); }
