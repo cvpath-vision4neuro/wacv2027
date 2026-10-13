@@ -182,7 +182,7 @@
         </div>
         <div class="defs">
           <div class="def"><dt>Debug phase</dt><dd>Participants can submit their containers for a sanity check on training cases to see if the output on the platform matches the local one.</dd></div>
-          <div class="def"><dt>Test phase, qualification</dt><dd>Models are ranked by C-index on the hidden test cohort. Those above <strong>C-index 0.65</strong> advance to the interpretability stage; below that threshold the prognostic signal is too weak for the explanation to mean much.</dd></div>
+          <div class="def"><dt>Test phase, qualification</dt><dd>Models are ranked by C-index on the hidden test cohort. Those above <strong>C-index 0.60</strong> advance to the interpretability stage; below that threshold the prognostic signal is too weak for the explanation to mean much.</dd></div>
           <div class="def"><dt>Automatic faithfulness</dt><dd>Perturbation analysis: regions the attribution map marks as highly relevant are progressively removed, and the change in the model's output is compared against perturbing random regions. A larger gap means a more faithful explanation.</dd></div>
           <div class="def"><dt>AI expert panel</dt><dd>Manuscripts, code, metrics, predictions, attribution maps and reports reviewed by at least three experts each, on Likert-scale questionnaires covering relevance and applicability for hypothesis-free scientific discovery, clarity, scientific plausibility, meaningful novelty, usefulness for understanding model behaviour, transferability to other pathology problems, and risk of hallucination.</dd></div>
           <div class="def"><dt>Pathology expert panel</dt><dd>Practising pathologists and trainees independently assess a subset of cases per submission, at least two experts each, on clinical meaningfulness, alignment with the image evidence, usefulness for understanding and questioning the prediction, and support for clinical understanding.</dd></div>
@@ -245,7 +245,7 @@
             <tbody>
               <tr><td class="what">22.08.2026 Announcement</td><td>OWL announced in conjunction with WACV 2027 and the CVPath workshop; starter kit, baseline, data loaders, Docker templates and evaluation scripts released; registration opens on Grand Challenge</td></tr>
               <tr><td class="what">Debug</td><td>Sanity check of submissions (dates on the challenge website)</td></tr>
-              <tr><td class="what">16.10.2026 - 30.11.2026 Test</td><td>One submission per team on the hidden test cohort; models above C-index 0.65 qualify for the interpretability stage</td></tr>
+              <tr><td class="what">16.10.2026 - 30.11.2026 Test</td><td>One submission per team on the hidden test cohort; models above C-index 0.60 qualify for the interpretability stage</td></tr>
               <tr><td class="what">Expert reader study</td><td>AI and pathology panels assess the qualifying submissions</td></tr>
               <tr><td class="what">15.12.2026 Finalists</td><td>Invitations to finalists and speakers sent</td></tr>
               <tr><td class="what">04-05.01.2027 Results</td><td>Winners announced, ranking and presentations by the top-ranking teams in the OWL session, on the workshop day</td></tr>
