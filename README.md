@@ -51,7 +51,7 @@ Where the things you are most likely to edit actually live:
 | What | Files |
 | --- | --- |
 | Regular paper deadline (`October 16, 2026`, extended from October 9) | `index.html` ×2, `cvpath.html`, `vision4neuro.html` |
-| Short paper / abstract deadline (`November 6, 2026`) | `index.html`, `cvpath.html`, `vision4neuro.html` |
+| Short paper / abstract deadline (`November 13, 2026`, extended from November 6) | `index.html`, `cvpath.html`, `vision4neuro.html` |
 | Notification (`October 30, 2026`) | `index.html`, `cvpath.html`, `vision4neuro.html`, `program.html`, `speakers.html` |
 | Contact addresses | `index.html`, `organizers.html`, `cvpath.html`, `vision4neuro.html` |
 | Topics of a call for papers | `cvpath.html`, `vision4neuro.html` (`<ul class="topics">`) |
@@ -74,8 +74,8 @@ name, affiliation and the two initials in the coloured square.
    are all relative, so the site keeps working either way; the address only
    affects link previews and clean indexing.
 2. **Confirm the deadlines marked "to be confirmed"** on the site: regular papers
-   October 16, 2026 (extended from October 9); short papers and extended abstracts November 6, 2026;
-   non-archival notification November 20, 2026. Fixed by WACV: notification
+   October 16, 2026 (extended from October 9); short papers and extended abstracts November 13, 2026 (extended from November 6);
+   non-archival notification November 27, 2026 (moved from November 20). Fixed by WACV: notification
    October 30, 2026 and camera-ready November 20, 2026.
 3. **Add the OpenReview link** when the workshop chairs create the venue. The
    site currently says it will be published here; search for `OpenReview` in
