@@ -76,7 +76,7 @@ name, affiliation and the two initials in the coloured square.
 2. **Confirm the deadlines marked "to be confirmed"** on the site: regular papers
    October 16, 2026 (extended from October 9); short papers and extended abstracts November 13, 2026 (extended from November 6);
    non-archival notification November 27, 2026 (moved from November 20). Fixed by WACV: notification
-   October 30, 2026 and camera-ready November 20, 2026.
+   October 30, 2026 and camera-ready November 25, 2026 (moved from November 20).
 3. **Add the OpenReview link** when the workshop chairs create the venue. The
    site currently says it will be published here; search for `OpenReview` in
    `cvpath.html` and `vision4neuro.html`.
