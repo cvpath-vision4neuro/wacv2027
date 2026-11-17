@@ -1,7 +1,7 @@
 # Vision for Biomedical Discovery (CVPath + Vision4Neuro) — WACV 2027 workshop website
 
 Website of the combined full-day workshop at IEEE/CVF WACV 2027
-(January 4–5, 2027, Disney Springs, Lake Buena Vista, Florida).
+(January 4, 2027, Disney Springs, Lake Buena Vista, Florida).
 
 Plain HTML, one CSS file and one small JavaScript file. **No build step, no
 framework, no dependencies.** You edit the `.html` files directly and push; that
